@@ -1,4 +1,8 @@
-# OG_Brunch
+# Programmed Brushes
+Compilation of drawing experiments created with digital brushes on p5.js 
+
+
+## Built based on OG_Brunch
 My first brunch boilerplate created from scratch.
 
 

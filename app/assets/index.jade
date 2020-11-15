@@ -1,21 +1,62 @@
 extends _templates/layout.jade
 
 
-block title
-	title Brunch_Basic_Boilerplate
-
-
-block google_metatags
-	meta(name='description', content='Page_description')
-	meta(name='subject', content='Page_subject')
-
-
-block og_metatags
-	meta(property="og:url" 			content="PLACE_YOUR_URL")
-	meta(property="og:title" 		content="PLACE_YOUR_TITLE")
-	meta(property="og:description" 	content="PLACE_YOUR_DESCRIPTION")
-	meta(property="og:image" 		content="PLACE_YOUR_IMAGE_URL")
-
-
 block content
-	h3 index.jade loaded.
+	#canvas-container
+		//- canvas
+
+	#instructions
+		header
+			h1 Brushes Letrismo
+			p 
+				|Canvas desarrollado sobre 
+				strong p5.js 
+				|para crear pinceles imposibles y experimentar con ellos.
+
+			p Prototipo básico, pinceles avanzados en desarrollo.
+
+		section
+			h2 A continuación se enlistan los comandos disponibles:
+
+			ul
+				li
+					h3 Limpiar canvas
+					p Presiona la tecla 'esc'.
+
+				li
+					h3 Usar otro pincel/sketch
+					p Presiona la tecla 'espacio'.
+					
+				li
+					h3 Pintar con pincel seleccionado
+					p Hacer 'click' sostenido.
+					
+				li
+					h3 Descargar imagen creada
+					p Presiona la tecla 's'.
+
+		button#close-info X
+
+
+	#controls
+		h3._subtitle Comandos:
+		ul
+			li
+				h3 Limpiar canvas
+				p 'esc'
+
+			li
+				h3 Usar otro pincel
+				p 'espacio'
+				
+			li
+				h3 Pintar
+				p 'click'
+				
+			li
+				h3 Descargar imagen
+				p 's'
+				
+			li
+				h3
+					a#show-info(href='#') Mostrar info

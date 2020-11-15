@@ -1,10 +1,14 @@
 // Default style
 *{
 	@include border-box;
+	@include unselectable;
+	font-family: sans-serif;
+	font-weight: 300;
+	@include smoothFont;
 }
 
 body{
-	color: #dadada;
+	color: #fff;
 	background-color: #202020;
 }
 
@@ -12,3 +16,123 @@ body, h1, h2, h3, h4, h5, h6, p, section, div, nav, ul, li, button{
 	margin: 0;
 	padding: 0;
 }
+
+h1, h2 , h3, h4, h5, h6, strong{
+	font-weight: 700;
+}
+
+ul, li{
+	list-style-type: none;
+}
+
+#main-wrapper{
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#canvas-container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#instructions{
+	position: fixed;
+	top: 0; left: 0;
+	width: 80%;
+	max-width: 500px;
+	padding: 10px 20px;
+	border: 2px solid #ccc;
+	text-align: center;
+	background-color: rgba(0,0,0, .6);
+	@include transitions-ease(.7s);
+
+	@media (min-width: 768px) {
+		padding: 50px;
+	}
+
+	&.hide{
+		opacity: 0;
+	}
+
+	header{
+		margin-bottom: 30px;
+
+		p{
+			display: block;
+
+			& + p {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	h1{
+		margin-bottom: 10px;
+	}
+
+	section{
+		h2{
+			margin-bottom: 20px;
+		}
+
+		li{
+			& + li{
+				margin-top: 10px;
+			}
+		}
+	}
+
+	button{
+		z-index: 1;
+		cursor: pointer;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		padding: 10px;
+		border: 1px solid white;
+		background: none;
+		color: white;
+	}
+}
+
+#controls{
+	position: fixed;
+	bottom: 0; left: 0;
+	width: 100%;
+	height: 60px;
+	padding-left: 30px;
+	display: flex;
+	font-size: 14px;
+
+	._subtitle{
+		margin-right: 30px;
+	}
+
+	ul{
+		display: flex;
+
+		li{
+			& + li{
+				margin-left: 30px;
+			}
+		}
+	}
+
+	a{
+		color: inherit;
+		text-decoration: underline;
+		font-weight: 700;
+	}
+}
+
+
+
+
+
+
+
+
